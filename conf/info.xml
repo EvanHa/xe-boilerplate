@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.2">
+    <title xml:lang="ko">Dummy 확장 레이아웃 </title>
+    <title xml:lang="en">Extended Dummy Layout </title>
+    <description xml:lang="ko">
+        골격용 Dummy 레이아웃의 확장형입니다.
+    </description>
+    <description xml:lang="en">
+        Dummy layout extended version.
+    </description>
+    <version>1.0</version>
+    <date>2012-03-02</date>
+    <author email_address="clubnb2@naver.com" link="http://www.premiumxe.com">
+        <name xml:lang="ko">정 현화</name>
+        <name xml:lang="en">Hyunhwa Jung</name>
+    </author>
+
+    <extra_vars>
+        <group>
+        <title xml:lang="ko">레이아웃 기본설정</title>
+		<title xml:lang="en">Basic Preference</title>
+            <var name="colorset" type="select">
+                <title xml:lang="ko">컬러셋</title>
+                <title xml:lang="en">Colorset</title>
+                <description xml:lang="ko">원하시는 컬러셋을 선택해주세요.</description>
+                <description xml:lang="en">Choose your destination colorset.</description>
+                <options value="white">
+                    <title xml:lang="ko">흰 색(기본)</title>
+                    <title xml:lang="en">White(Default)</title>
+                </options>
+                <options value="black">
+                    <title xml:lang="ko">검은 색</title>
+                    <title xml:lang="en">Black</title>
+                </options>
+            </var>
+			
+			<var name="logo_image" type="image">
+				<title xml:lang="ko">로고이미지</title>
+				<description xml:lang="ko">레이아웃의 상단에 표시될 로고이미지를 입력하세요.</description>
+			</var>
+			
+			<var name="site_url" type="text">
+				<title xml:lang="ko">홈 페이지 URL</title>
+				<description xml:lang="ko">로고를 클릭시에 이동할 홈 페이지 URL을 입력해 주세요</description>
+			</var>
+		</group>
+		
+        <group>
+        <title xml:lang="ko">구획 설정</title>
+			<var name="layout_type" type="select">
+				<title xml:lang="ko">구획 스타일 선택</title>
+				<description xml:lang="ko">원하시는 구획 스타일을 선택해 주세요.</description>
+				<options value="c">
+					<title xml:lang="ko">1단 형식</title>
+				</options>
+				<options value="ec">
+					<title xml:lang="ko">2단 형식 스타일 1</title>
+				</options>
+				<options value="ce">
+					<title xml:lang="ko">2단 형식 스타일 2</title>
+				</options>
+				<options value="ece">
+					<title xml:lang="ko">3단 형식 스타일 3</title>
+				</options>
+			</var>
+			
+			<var name="site_width" type="text">
+				<title xml:lang="ko">사이트 너비</title>
+				<description xml:lang="ko">사이트 전체 폭 (기본 980px). 980px과 같이 px, %같은 단위까지 모두 기재해주세요.</description>
+			</var>
+			
+			<var name="e1_width" type="text">
+				<title xml:lang="ko">사이드바 1의 너비</title>
+				<description xml:lang="ko">사이드바 1의 폭 (기본 220px). 220px과 같이 px, %같은 단위까지 모두 기재해주세요.</description>
+			</var>
+		</group>
+    </extra_vars>
+	
+    <menus>
+        <menu name="main_menu">
+            <title xml:lang="ko">메인 메뉴</title>
+            <title xml:lang="en">Main menu</title>
+        </menu>
+    </menus>
+</layout>

@@ -1,0 +1,48 @@
+<load cond="$layout_info->colorset == 'white'" target="css/default.css" />
+<load cond="$layout_info->colorset == 'black'" target="css/black.css" />
+
+<style type="text/css" >
+.container { width:{$layout_info->site_width} }
+.e1 { width:{$layout_info->e1_width} }
+</style>
+
+<style type="text/css" cond="$layout_info->layout_type == 'ce'" >
+.e1 { float:right; margin-left:10px; margin-right:0; }
+</style>
+
+<div class="container">
+    <div class="header">
+        <a href="{$layout_info->site_url}" target="_top">
+            <img src="{$layout_info->logo_image}" alt="로고" cond="$layout_info->logo_image" />
+            <img src="img/default/logo.png" alt="로고" cond="!$layout_info->logo_image" />
+        </a>
+    </div><!--end of header-->
+    
+    <div class="sub_header">
+        <ul class="nav">
+            <li loop="$main_menu->list=>$key,$val" class="on"|cond="$val['selected']"><a href="{$val['href']}" onclick="window.open(this.href);return false;"|cond="$val['open_window']=='Y'">{$val['link']}</a></li>
+        </ul><!--end of nav-->
+    </div><!--end of sub_header-->
+ 
+    <div class="container">
+        <div class="e1" cond="$layout_info->layout_type != 'c'">
+            <!--계정정보 인클루드-->
+            <include target="packages/accounts/include.accounts.html" />
+        </div><!--end of e1-->
+        
+        <div class="e2" cond="$layout_info->layout_type == 'ece'">
+            E2
+        </div><!--end of e2-->
+        
+        <div class="content">
+            {$content}
+        </div><!--end of content-->
+    </div><!--end of container-->
+    
+    <div class="footer">
+        <ul class="language">
+            <li>다국어 :</li>
+            <li loop="$lang_supported => $key, $val" cond="$key!= $lang_type" class="{$key}"><span onclick="doChangeLangType('{$key}');return false;">{$val}</span></li>
+        </ul>
+    </div><!--end of footer-->
+</div><!--end of container-->
